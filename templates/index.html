@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>my first page</title>
+    <title>
+        Email Spam Classifier
+    </title>
     <style>
-        body{
+        body {
             text-align: center;
         }
+
         button {
+            color: aliceblue;
             background-color: blue;
-            color: white;
         }
     </style>
 </head>
+
 <body>
     <h1>Email Spam Classifier</h1>
     <div>
         <form method="post" action="/predict">
-            <textarea rows="15" cols="60" name="email-content" 
-            placeholder="Enter your email Body">{{email}}</textarea>
+            <textarea rows="12" cols="60" name="content" placeholder="Enter your email here"
+                autocomplete="off">{{ email }}</textarea>
             <div>
-                <button type="submit">Check Spam</button>
+                <button type="submit">
+                    Button
+                </button>
                 <a href="/">Reset</a>
             </div>
         </form>
-    </div>    
+
+    </div>
     <div>
         {% if prediction %}
         {% if prediction == 1 %}
@@ -35,4 +43,5 @@
         <!-- <p id="display"></p> -->
     </div>
 </body>
+
 </html>
